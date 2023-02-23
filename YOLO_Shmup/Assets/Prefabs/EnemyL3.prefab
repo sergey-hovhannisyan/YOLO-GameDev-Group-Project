@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7167859212713026122}
   - component: {fileID: 7167859212713026123}
   m_Layer: 0
-  m_Name: EnemyL1
+  m_Name: EnemyL3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -176,6 +176,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86759c8a7275a534b99cc036ab06672a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 500
+  enemySpeed: 800
   selfExplosion: {fileID: 624710900263243861, guid: d5facd5b88faf6e439a0eef6df81cecd, type: 3}
   selfExplosionClip: {fileID: 8300000, guid: 36a2d32df9e1b4649b0d4835198f5686, type: 3}

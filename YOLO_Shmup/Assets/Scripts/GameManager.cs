@@ -10,15 +10,18 @@ public class GameManager : MonoBehaviour
     private int score;
     private int countDownTime;
 
+
     public TextMeshProUGUI scoreUI;
     public TextMeshProUGUI startCountDown;
     public TextMeshProUGUI lifeSpan;
     public PlayerController _playerController;
     public EnemySpawner _enemySpawner;
+    public EnemyController _enemyController;
     public AudioClip countDownClip;
-    public GameObject startManagable;
+    public GameObject startScreen;
     public GameObject restartScreen;
     public GameObject continueScreen;
+    public GameObject gameStatScreen;
     public Transform player;
 
     // Called when gameobject is created
@@ -33,7 +36,8 @@ public class GameManager : MonoBehaviour
         {
             DontDestroyOnLoad(gameObject);
         }
-        startManagable.SetActive(true);
+        startScreen.SetActive(true);
+        gameStatScreen.SetActive(true); 
         restartScreen.SetActive(false);
         continueScreen.SetActive(false);
     }
@@ -66,7 +70,7 @@ public class GameManager : MonoBehaviour
 
     // Player calls UpdateLives if triggered
     public void UpdateLives(int lifePoint)
-    { 
+    {
         if (lives > 0)
         {
             lives += lifePoint;
@@ -99,8 +103,10 @@ public class GameManager : MonoBehaviour
         if (lives <= 0)
         {
             StartCoroutine(WaitSeconds(2));
-            Start();
-            startManagable.SetActive(false);
+            _playerController.enabled = false;
+            _enemySpawner.enabled = false;
+            startScreen.SetActive(false);
+            gameStatScreen.SetActive(false);
             restartScreen.SetActive(true);
         }
 

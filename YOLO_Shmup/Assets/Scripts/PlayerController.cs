@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     float angleSpeed = 50f;
     float bulletSpeed = 1000f;
     float timeInterval = 0.07f;
+    bool hitTimeFlag = true;
 
     Rigidbody2D _rigidbody2D;
     public GameObject bulletPrefab;
@@ -52,9 +53,12 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy") && hitTimeFlag)
         {
+            hitTimeFlag = false;
             _gameManager.UpdateLives(-1);
+            StartCoroutine(WaitSeconds(2f));
+            hitTimeFlag = true;
         }
     }
 
