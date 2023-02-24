@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1306073792, guid: d9ed70fe40effbb45890aaaf51e003cb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 35493682e11588542ac2a28d716a977c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -125,7 +125,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.13, y: 0.48}
+    oldSize: {x: 0.48, y: 0.48}
     newSize: {x: 1.13, y: 0.48}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -182,3 +182,4 @@ MonoBehaviour:
   selfExplosion: {fileID: 624710900263243861, guid: d5facd5b88faf6e439a0eef6df81cecd, type: 3}
   bulletSpikes: {fileID: 5757551197552953043, guid: 40dd3cf392e25554bbc105a9ca65a47e, type: 3}
   selfExplosionClip: {fileID: 8300000, guid: 36a2d32df9e1b4649b0d4835198f5686, type: 3}
+  hp: 10
