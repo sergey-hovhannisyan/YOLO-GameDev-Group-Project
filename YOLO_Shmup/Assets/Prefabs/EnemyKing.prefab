@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86759c8a7275a534b99cc036ab06672a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointValue: 1
+  pointValue: 1000
   enemySpeed: 800
   lives: 1
   selfExplosion: {fileID: 624710900263243861, guid: d5facd5b88faf6e439a0eef6df81cecd, type: 3}
