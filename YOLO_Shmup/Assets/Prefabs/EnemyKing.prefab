@@ -183,7 +183,7 @@ MonoBehaviour:
   selfExplosion: {fileID: 624710900263243861, guid: d5facd5b88faf6e439a0eef6df81cecd, type: 3}
   bulletSpikes: {fileID: 5757551197552953043, guid: 40dd3cf392e25554bbc105a9ca65a47e, type: 3}
   selfExplosionClip: {fileID: 8300000, guid: 36a2d32df9e1b4649b0d4835198f5686, type: 3}
-  hp: 10
+  hp: 100
 --- !u!114 &-8729458307417006158
 MonoBehaviour:
   m_ObjectHideFlags: 0

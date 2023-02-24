@@ -7900,7 +7900,7 @@ PrefabInstance:
       objectReference: {fileID: 1386658782}
     - target: {fileID: 1392171015757263926, guid: a016a84d7c9cdca4e98bc6ed0c046ce3, type: 3}
       propertyPath: maxScore
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1392171015757263926, guid: a016a84d7c9cdca4e98bc6ed0c046ce3, type: 3}
       propertyPath: startScreen

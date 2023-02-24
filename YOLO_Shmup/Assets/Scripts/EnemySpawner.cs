@@ -9,6 +9,7 @@ public class EnemySpawner : MonoBehaviour
     public GameObject enemyPrefab;
     public GameObject blackHolePrefab;
 
+
     IEnumerator Start()
     {
         for (int i = 0; i < numberOfEnemies; i++)
