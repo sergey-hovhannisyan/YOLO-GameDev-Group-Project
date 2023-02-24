@@ -110,7 +110,13 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        print("collid");
+        if(other.gameObject.CompareTag("EnemyBullet")&& hitTimeFlag){
+            print("EnemyBullet");
+            hitTimeFlag = false;
+            _gameManager.UpdateLives(-1);
+            StartCoroutine(WaitSeconds(2f));
+            hitTimeFlag = true;
+        }
         if (other.gameObject.CompareTag("Enemy") && hitTimeFlag)
         {
             hitTimeFlag = false;
