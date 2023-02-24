@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     float speedMultiplier = 2f;
     float angleSpeed = 50f;
     float bulletSpeed = 1000f;
+
+    public float missileSpeed= 100f; 
     float timeInterval = 0.07f;
     bool hitTimeFlag = true;
     public int bulletLives = 30;
@@ -24,6 +26,7 @@ public class PlayerController : MonoBehaviour
     public GameObject respawn_PS;
     public Transform spawn;
     public AudioClip gun_shot_clip;
+    public AudioClip missile_shot_clip;
     public AudioClip buzzer_clip;
     //Teleporting
     public GameObject teleportPrefab;
