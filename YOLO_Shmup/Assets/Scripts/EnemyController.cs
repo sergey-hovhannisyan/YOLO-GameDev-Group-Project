@@ -3,12 +3,14 @@ using System.Collections;
 
 public class EnemyController : MonoBehaviour
 {
-    private int pointValue = 1;
+    public int pointValue = 1;
     public float enemySpeed = 500f;
+    public int lives = 1;
     Rigidbody2D _rigidbody2D;
 
     private GameObject player;
     public GameObject selfExplosion;
+    public GameObject bulletSpikes;
     public AudioClip selfExplosionClip;
 
     GameManager _gameManager;
@@ -35,15 +37,22 @@ public class EnemyController : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other)
-    {
-        // Hit with bullet
+    { 
         if (other.CompareTag("Bullet"))
         {
-            Instantiate(selfExplosion, transform.position, Quaternion.identity);
-            AudioSource.PlayClipAtPoint(selfExplosionClip, transform.position, 1f);
             Destroy(other.gameObject);
-            Destroy(gameObject);
-            _gameManager.AddScore(pointValue);
+            Instantiate(bulletSpikes, transform.position, Quaternion.identity);
+            if (lives == 0)
+            {
+                AudioSource.PlayClipAtPoint(selfExplosionClip, transform.position, 1f);
+                Instantiate(selfExplosion, transform.position, Quaternion.identity);
+                Destroy(gameObject);
+                _gameManager.AddScore(pointValue);
+            }
+            else
+            {
+                lives--;
+            }
         }
     }
     

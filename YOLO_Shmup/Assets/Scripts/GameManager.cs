@@ -6,7 +6,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    private int lives;
+    public int lives;
     private int score;
     private int countDownTime;
 
@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     public GameObject restartScreen;
     public GameObject continueScreen;
     public GameObject gameStatScreen;
-    public Transform player;
+    public GameObject player;
 
     // Called when gameobject is created
     private void Awake()
@@ -47,12 +47,13 @@ public class GameManager : MonoBehaviour
     {
         _playerController.enabled = false;
         _enemySpawner.enabled = false;
-        lives = 3;
+        lives = 5;
         lifeSpan.text = "x" + lives.ToString();
         score = 0;
         scoreUI.text = "SCORE: " + score;
         countDownTime = 3;
-        player.position = new Vector2(0, 0);
+        _playerController.UpdateBulletLives(30);
+        player.transform.position = new Vector2(0, 0);
     }
 
     // Calls StartGame function for countdown & start
@@ -74,6 +75,7 @@ public class GameManager : MonoBehaviour
         if (lives > 0)
         {
             lives += lifePoint;
+            _playerController.UpdateBulletLives(30);
             lifeSpan.text = "x" + lives.ToString();
         }
     }

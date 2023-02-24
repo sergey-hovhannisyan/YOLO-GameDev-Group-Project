@@ -5090,9 +5090,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4268652955528767192, guid: 31b08248cbd785e45bf2a44249318490, type: 3}
     - target: {fileID: 4438515219558897438, guid: 617e0982478e52d47905e221f25b3ac5, type: 3}
+      propertyPath: buzzer_clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e0f179ac990a31341868fae6e32244e5, type: 3}
+    - target: {fileID: 4438515219558897438, guid: 617e0982478e52d47905e221f25b3ac5, type: 3}
+      propertyPath: bulletSpikes
+      value: 
+      objectReference: {fileID: 5757551197552953043, guid: 40dd3cf392e25554bbc105a9ca65a47e, type: 3}
+    - target: {fileID: 4438515219558897438, guid: 617e0982478e52d47905e221f25b3ac5, type: 3}
       propertyPath: _enemySpawner
       value: 
       objectReference: {fileID: 1173693147}
+    - target: {fileID: 4438515219558897438, guid: 617e0982478e52d47905e221f25b3ac5, type: 3}
+      propertyPath: selfExplosion
+      value: 
+      objectReference: {fileID: 624710900263243861, guid: d5facd5b88faf6e439a0eef6df81cecd, type: 3}
+    - target: {fileID: 4438515219558897438, guid: 617e0982478e52d47905e221f25b3ac5, type: 3}
+      propertyPath: teleport_clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 28c4ed8d177f67044a40f10daa3f5d9a, type: 3}
+    - target: {fileID: 4438515219558897438, guid: 617e0982478e52d47905e221f25b3ac5, type: 3}
+      propertyPath: teleportPrefab
+      value: 
+      objectReference: {fileID: 6404362347368962417, guid: 2125e8f5a2e895045b73d5d336e1e2b3, type: 3}
+    - target: {fileID: 4438515219558897438, guid: 617e0982478e52d47905e221f25b3ac5, type: 3}
+      propertyPath: selfExplosionClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 36a2d32df9e1b4649b0d4835198f5686, type: 3}
     - target: {fileID: 4438515219558897439, guid: 617e0982478e52d47905e221f25b3ac5, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -5151,6 +5175,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 617e0982478e52d47905e221f25b3ac5, type: 3}
+--- !u!1 &277526300 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4438515219701764781, guid: 617e0982478e52d47905e221f25b3ac5, type: 3}
+  m_PrefabInstance: {fileID: 277526299}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &326235079
 GameObject:
   m_ObjectHideFlags: 0
@@ -5238,17 +5267,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4438515219558897438, guid: 617e0982478e52d47905e221f25b3ac5, type: 3}
   m_PrefabInstance: {fileID: 277526299}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 277526300}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 768094cb7b169214eaceb419ad5c8b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &502206206 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4438515219558897439, guid: 617e0982478e52d47905e221f25b3ac5, type: 3}
-  m_PrefabInstance: {fileID: 277526299}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -6358,7 +6382,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 14.700012, y: -7.2900085}
+  m_AnchoredPosition: {x: 14.699951, y: -7.289978}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1024407834
@@ -6594,8 +6618,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c87726b6300e714a9254ef59ac5c66f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  instantiateTime: 0.5
-  levelEnemies: 50
+  instantiateTime: 0.7
+  numberOfEnemies: 50
   enemyPrefab: {fileID: 7167859212713026118, guid: f32b5c2001b7a08478538328a7a44c9a, type: 3}
   blackHolePrefab: {fileID: 4268652955528767192, guid: 31b08248cbd785e45bf2a44249318490, type: 3}
 --- !u!4 &1173693148
@@ -6751,7 +6775,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 127.9, y: -10.6}
+  m_AnchoredPosition: {x: 127.900024, y: -10.599976}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1386658782
@@ -7947,9 +7971,13 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 1392171015757263926, guid: a016a84d7c9cdca4e98bc6ed0c046ce3, type: 3}
+      propertyPath: lives
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1392171015757263926, guid: a016a84d7c9cdca4e98bc6ed0c046ce3, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 502206206}
+      objectReference: {fileID: 277526300}
     - target: {fileID: 1392171015757263926, guid: a016a84d7c9cdca4e98bc6ed0c046ce3, type: 3}
       propertyPath: scoreUI
       value: 

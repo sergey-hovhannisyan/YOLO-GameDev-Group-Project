@@ -6618,9 +6618,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c87726b6300e714a9254ef59ac5c66f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  instantiateTime: 2
-  numberOfEnemies: 25
-  enemyPrefab: {fileID: 8376667925959754859, guid: e9eb2a25e345899408770e23bfda3066, type: 3}
+  instantiateTime: 0
+  numberOfEnemies: 1
+  enemyPrefab: {fileID: 7167859212713026118, guid: e7ecb2c4655780147a0ba144868c6a5b, type: 3}
   blackHolePrefab: {fileID: 4268652955528767192, guid: 31b08248cbd785e45bf2a44249318490, type: 3}
 --- !u!4 &1173693148
 Transform:
