@@ -108,7 +108,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 175f8603d3779be43b1d663ae6ac45bf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6635ab5c7b04d0047bcb4455b920cfe0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -157,7 +157,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.48, y: 0.48}
+    oldSize: {x: 0.96, y: 0.96}
     newSize: {x: 0.48, y: 0.48}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -334,10 +334,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   missileSpeed: 100
+  bulletLives: 30
+  selfExplosion: {fileID: 0}
+  bulletSpikes: {fileID: 0}
+  selfExplosionClip: {fileID: 0}
   bulletPrefab: {fileID: 9201238286020513327, guid: c2ae73fe8a4dc544bb95a59a8a3e1c0e, type: 3}
   missilePrefab: {fileID: 9201238286020513327, guid: c2ae73fe8a4dc544bb95a59a8a3e1c0e, type: 3}
   respawn_PS: {fileID: 4268652955528767192, guid: 31b08248cbd785e45bf2a44249318490, type: 3}
   spawn: {fileID: 4438515219681618880}
   gun_shot_clip: {fileID: 8300000, guid: 70b427a58d360f141973e1f0f1084963, type: 3}
   missile_shot_clip: {fileID: 0}
+  buzzer_clip: {fileID: 0}
+  teleportPrefab: {fileID: 0}
+  teleport_clip: {fileID: 0}
   _enemySpawner: {fileID: 0}
