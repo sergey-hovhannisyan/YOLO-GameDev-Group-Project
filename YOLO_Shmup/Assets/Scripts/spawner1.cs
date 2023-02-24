@@ -17,7 +17,8 @@ public class spawner1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //print(rnd.Next(1,4));
+        System.Random random = new System.Random();
+        timerLimit = random.Next(1,4);
         timer+=Time.deltaTime;
         if(timer>timerLimit){
             Instantiate(enemy, transform.position,Quaternion.identity);
