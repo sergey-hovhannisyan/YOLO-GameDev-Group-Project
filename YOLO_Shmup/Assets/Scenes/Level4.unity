@@ -8228,7 +8228,7 @@ PrefabInstance:
       objectReference: {fileID: 1896404851}
     - target: {fileID: 1392171015757263926, guid: a016a84d7c9cdca4e98bc6ed0c046ce3, type: 3}
       propertyPath: maxScore
-      value: 250
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1392171015757263926, guid: a016a84d7c9cdca4e98bc6ed0c046ce3, type: 3}
       propertyPath: startScreen
