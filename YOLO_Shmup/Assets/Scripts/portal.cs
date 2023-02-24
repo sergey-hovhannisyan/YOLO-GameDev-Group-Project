@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class portal : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class portal : MonoBehaviour
     float next = 0.2f;
     int currSprite = 0;
     float currTime = 0;
+    public int nextScene;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,5 +39,11 @@ public class portal : MonoBehaviour
         }
         GetComponent<SpriteRenderer>().sprite = spriteArray[currSprite];
     }
-    
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject == player)
+        {
+            SceneManager.LoadScene(nextScene);
+        }
+    }
 }

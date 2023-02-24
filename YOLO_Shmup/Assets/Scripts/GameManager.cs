@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
     public GameObject continueScreen;
     public GameObject gameStatScreen;
     public GameObject player;
+    public GameObject portal;
+
+    public int maxScore;
 
     // Called when gameobject is created
     private void Awake()
@@ -109,6 +112,10 @@ public class GameManager : MonoBehaviour
             startScreen.SetActive(false);
             gameStatScreen.SetActive(false);
             restartScreen.SetActive(true);
+        }
+        if(score >= maxScore)
+        {
+            portal.SetActive(true);
         }
 
 #if !Unity_WEBGL

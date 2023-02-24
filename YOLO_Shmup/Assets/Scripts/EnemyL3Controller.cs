@@ -56,6 +56,7 @@ public class EnemyL3Controller : MonoBehaviour
         // Hit with bullet
         if (other.CompareTag("Bullet"))
         {
+            Debug.Log("hit");
             Destroy(other.gameObject);
             Instantiate(bulletSpikes, transform.position, Quaternion.identity);
             if (lives == 0)
