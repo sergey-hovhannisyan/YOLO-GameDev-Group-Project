@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
     private int score;
     private int countDownTime;
 
-
     public TextMeshProUGUI scoreUI;
     public TextMeshProUGUI startCountDown;
     public TextMeshProUGUI lifeSpan;

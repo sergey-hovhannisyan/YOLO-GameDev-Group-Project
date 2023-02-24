@@ -7,6 +7,9 @@ TagManager:
   - Enemy
   - Border
   - Bullet
+  - Heart
+  - missile
+  - Missile
   layers:
   - Default
   - TransparentFX

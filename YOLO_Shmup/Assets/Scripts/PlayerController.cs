@@ -8,19 +8,27 @@ public class PlayerController : MonoBehaviour
     float bulletSpeed = 1000f;
     float timeInterval = 0.07f;
     bool hitTimeFlag = true;
-
+    public float missileSpeed = 100f;
     Rigidbody2D _rigidbody2D;
     public GameObject bulletPrefab;
+    public GameObject missilePrefab;
     public GameObject respawn_PS;
     public Transform spawn;
     public AudioClip gun_shot_clip;
+    public AudioClip missile_shot_clip;
     public EnemySpawner _enemySpawner;
 
     private bool isShooting = false;
 
+    public static string bulletType = "bullet";
+
     GameManager _gameManager;
 
     // Initialization
+
+    public static void BulletType(string type){
+        bulletType = type;
+    }
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -53,11 +61,17 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        print("collid");
         if (other.gameObject.CompareTag("Enemy") && hitTimeFlag)
         {
             hitTimeFlag = false;
             _gameManager.UpdateLives(-1);
             StartCoroutine(WaitSeconds(2f));
+            hitTimeFlag = true;
+        }
+        if(other.gameObject.CompareTag("Heart") && hitTimeFlag){
+            hitTimeFlag = false;
+            _gameManager.UpdateLives(1);
             hitTimeFlag = true;
         }
     }
@@ -84,11 +98,22 @@ public class PlayerController : MonoBehaviour
     {
         while (isShooting)
         {
-            GameObject newBullet = Instantiate(bulletPrefab, spawn.position, Quaternion.identity);
-            newBullet.transform.rotation = transform.rotation;
-            newBullet.GetComponent<Rigidbody2D>().AddForce(transform.up * bulletSpeed);
-            AudioSource.PlayClipAtPoint(gun_shot_clip, spawn.position, 1f);
-            yield return new WaitForSeconds(timeInterval);
+            if(bulletType == "bullet"){
+                GameObject newBullet = Instantiate(bulletPrefab, spawn.position, Quaternion.identity);
+                newBullet.transform.rotation = transform.rotation;
+                newBullet.GetComponent<Rigidbody2D>().AddForce(transform.up * bulletSpeed);
+                AudioSource.PlayClipAtPoint(gun_shot_clip, spawn.position, 1f);
+                yield return new WaitForSeconds(timeInterval);
+            }
+            if(bulletType == "missile"){
+                GameObject newMissile = Instantiate(missilePrefab, spawn.position, Quaternion.identity);
+                newMissile.transform.rotation = transform.rotation;
+                newMissile.GetComponent<Rigidbody2D>().AddForce(transform.up * missileSpeed);
+                AudioSource.PlayClipAtPoint(missile_shot_clip, spawn.position, 1f);
+                print("missile");
+                yield return new WaitForSeconds(timeInterval);
+                yield break;
+            }
         }
     }
 

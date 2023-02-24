@@ -333,8 +333,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 768094cb7b169214eaceb419ad5c8b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 9201238286020513327, guid: 85cc2d7e24a311f49b87da2ebec4f88a, type: 3}
+  missileSpeed: 100
+  bulletPrefab: {fileID: 9201238286020513327, guid: c2ae73fe8a4dc544bb95a59a8a3e1c0e, type: 3}
+  missilePrefab: {fileID: 9201238286020513327, guid: c2ae73fe8a4dc544bb95a59a8a3e1c0e, type: 3}
   respawn_PS: {fileID: 4268652955528767192, guid: 31b08248cbd785e45bf2a44249318490, type: 3}
   spawn: {fileID: 4438515219681618880}
   gun_shot_clip: {fileID: 8300000, guid: 70b427a58d360f141973e1f0f1084963, type: 3}
+  missile_shot_clip: {fileID: 0}
   _enemySpawner: {fileID: 0}

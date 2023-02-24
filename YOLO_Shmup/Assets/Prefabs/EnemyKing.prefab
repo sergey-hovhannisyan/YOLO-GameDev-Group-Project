@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 7167859212713026117}
   - component: {fileID: 7167859212713026121}
   - component: {fileID: 7167859212713026122}
-  - component: {fileID: 7167859212713026123}
+  - component: {fileID: 5641623912241209079}
+  - component: {fileID: -8729458307417006158}
   m_Layer: 0
   m_Name: EnemyKing
   m_TagString: Enemy
@@ -164,7 +165,7 @@ PolygonCollider2D:
       - {x: 0.5194167, y: -0.16861832}
       - {x: 0.555, y: -0.17}
       - {x: 0.55556697, y: -0.16471627}
---- !u!114 &7167859212713026123
+--- !u!114 &5641623912241209079
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,6 +177,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86759c8a7275a534b99cc036ab06672a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 800
+  pointValue: 1
+  enemySpeed: 500
   selfExplosion: {fileID: 624710900263243861, guid: d5facd5b88faf6e439a0eef6df81cecd, type: 3}
   selfExplosionClip: {fileID: 8300000, guid: 36a2d32df9e1b4649b0d4835198f5686, type: 3}
+  hp: 10
+--- !u!114 &-8729458307417006158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7167859212713026118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceff24064d597e54c95bd671f87613b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerLimit: 2
+  enemy: {fileID: 7167859212713026118, guid: f32b5c2001b7a08478538328a7a44c9a, type: 3}
