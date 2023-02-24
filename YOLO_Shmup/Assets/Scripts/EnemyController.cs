@@ -5,10 +5,12 @@ public class EnemyController : MonoBehaviour
 {
     public int pointValue = 1;
     public float enemySpeed = 500f;
+    public int lives = 1;
     Rigidbody2D _rigidbody2D;
 
     private GameObject player;
     public GameObject selfExplosion;
+    public GameObject bulletSpikes;
     public AudioClip selfExplosionClip;
     public int hp = 10; 
 
@@ -36,8 +38,7 @@ public class EnemyController : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other)
-    {
-        // Hit with bullet
+    { 
         if (other.CompareTag("Bullet"))
         {
             hp-=1;
